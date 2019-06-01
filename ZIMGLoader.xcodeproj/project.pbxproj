@@ -16,6 +16,7 @@
 		B8393AAF22A17EA9001ED067 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8393AAE22A17EA9001ED067 /* MainViewController.swift */; };
 		B8393AB422A17EAA001ED067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8393AB322A17EAA001ED067 /* Assets.xcassets */; };
 		B8393AB722A17EAA001ED067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8393AB522A17EAA001ED067 /* LaunchScreen.storyboard */; };
+		B8393AC222A1AA44001ED067 /* ZIMGLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8393AC122A1AA44001ED067 /* ZIMGLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B8393AB322A17EAA001ED067 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8393AB622A17EAA001ED067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8393AB822A17EAA001ED067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8393AC122A1AA44001ED067 /* ZIMGLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIMGLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B8393A7222A17607001ED067 /* ZIMGLoader.h */,
+				B8393AC122A1AA44001ED067 /* ZIMGLoader.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8393AC222A1AA44001ED067 /* ZIMGLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +597,7 @@
 		B8393A8722A17607001ED067 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ5D9URT5U;
@@ -613,6 +618,7 @@
 		B8393A8822A17607001ED067 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ5D9URT5U;
