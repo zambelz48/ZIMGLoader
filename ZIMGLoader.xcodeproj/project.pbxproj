@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B8393A7922A17607001ED067 /* ZIMGLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8393A6F22A17607001ED067 /* ZIMGLoader.framework */; };
-		B8393A7E22A17607001ED067 /* ZIMGLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8393A7D22A17607001ED067 /* ZIMGLoaderTests.swift */; };
 		B8393A8022A17607001ED067 /* ZIMGLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B8393A7222A17607001ED067 /* ZIMGLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8393A9422A17C9F001ED067 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8393A9322A17C9F001ED067 /* AppDelegate.swift */; };
 		B8393A9E22A17CA1001ED067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8393A9C22A17CA1001ED067 /* LaunchScreen.storyboard */; };
@@ -65,7 +64,6 @@
 		B8393A7222A17607001ED067 /* ZIMGLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZIMGLoader.h; sourceTree = "<group>"; };
 		B8393A7322A17607001ED067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8393A7822A17607001ED067 /* ZIMGLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZIMGLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8393A7D22A17607001ED067 /* ZIMGLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIMGLoaderTests.swift; sourceTree = "<group>"; };
 		B8393A7F22A17607001ED067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8393A9122A17C9F001ED067 /* ZIMGLoaderTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZIMGLoaderTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8393A9322A17C9F001ED067 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				B8ABBD4E22A431F0004CB1A7 /* TestCases */,
 				B8393A9222A17C9F001ED067 /* TestHost */,
 				B8393A8A22A1763E001ED067 /* Supporting Files */,
-				B8393A7D22A17607001ED067 /* ZIMGLoaderTests.swift */,
 			);
 			path = ZIMGLoaderTests;
 			sourceTree = "<group>";
@@ -499,7 +496,6 @@
 				B8ABBD4C22A431DC004CB1A7 /* CommonError.swift in Sources */,
 				B8ABBD4B22A431D9004CB1A7 /* HttpRequestSpec.swift in Sources */,
 				B8ABBD4922A431C9004CB1A7 /* HttpHandler.swift in Sources */,
-				B8393A7E22A17607001ED067 /* ZIMGLoaderTests.swift in Sources */,
 				B8ABBD5A22A43373004CB1A7 /* FakeJsonData.swift in Sources */,
 				B8ABBD5C22A433A2004CB1A7 /* MockHttpResponse.swift in Sources */,
 				B8ABBD5422A43281004CB1A7 /* StubURLSession.swift in Sources */,
