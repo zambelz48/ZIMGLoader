@@ -28,6 +28,19 @@
 		B8ABBD4622A427F6004CB1A7 /* HttpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD4422A427F6004CB1A7 /* HttpHandler.swift */; };
 		B8ABBD4722A4281B004CB1A7 /* HttpRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3A22A413D5004CB1A7 /* HttpRequestSpec.swift */; };
 		B8ABBD4822A42891004CB1A7 /* URLSessionStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3522A41327004CB1A7 /* URLSessionStandard.swift */; };
+		B8ABBD4922A431C9004CB1A7 /* HttpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD4422A427F6004CB1A7 /* HttpHandler.swift */; };
+		B8ABBD4A22A431D4004CB1A7 /* URLSessionStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3522A41327004CB1A7 /* URLSessionStandard.swift */; };
+		B8ABBD4B22A431D9004CB1A7 /* HttpRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3A22A413D5004CB1A7 /* HttpRequestSpec.swift */; };
+		B8ABBD4C22A431DC004CB1A7 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3D22A414F7004CB1A7 /* CommonError.swift */; };
+		B8ABBD4D22A431E1004CB1A7 /* ErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD4022A42732004CB1A7 /* ErrorFactory.swift */; };
+		B8ABBD5022A43216004CB1A7 /* HttpHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD4F22A43216004CB1A7 /* HttpHandlerTests.swift */; };
+		B8ABBD5422A43281004CB1A7 /* StubURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD5322A43281004CB1A7 /* StubURLSession.swift */; };
+		B8ABBD5622A43293004CB1A7 /* StubSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD5522A43293004CB1A7 /* StubSessionDataTask.swift */; };
+		B8ABBD5A22A43373004CB1A7 /* FakeJsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD5922A43373004CB1A7 /* FakeJsonData.swift */; };
+		B8ABBD5C22A433A2004CB1A7 /* MockHttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD5B22A433A2004CB1A7 /* MockHttpResponse.swift */; };
+		B8ABBD5F22A435EF004CB1A7 /* HttpHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD5E22A435EF004CB1A7 /* HttpHandler+Extension.swift */; };
+		B8ABBD6022A435FE004CB1A7 /* HttpHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD5E22A435EF004CB1A7 /* HttpHandler+Extension.swift */; };
+		B8ABBD6122A435FF004CB1A7 /* HttpHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD5E22A435EF004CB1A7 /* HttpHandler+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +83,12 @@
 		B8ABBD3D22A414F7004CB1A7 /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
 		B8ABBD4022A42732004CB1A7 /* ErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFactory.swift; sourceTree = "<group>"; };
 		B8ABBD4422A427F6004CB1A7 /* HttpHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHandler.swift; sourceTree = "<group>"; };
+		B8ABBD4F22A43216004CB1A7 /* HttpHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHandlerTests.swift; sourceTree = "<group>"; };
+		B8ABBD5322A43281004CB1A7 /* StubURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubURLSession.swift; sourceTree = "<group>"; };
+		B8ABBD5522A43293004CB1A7 /* StubSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSessionDataTask.swift; sourceTree = "<group>"; };
+		B8ABBD5922A43373004CB1A7 /* FakeJsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeJsonData.swift; sourceTree = "<group>"; };
+		B8ABBD5B22A433A2004CB1A7 /* MockHttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpResponse.swift; sourceTree = "<group>"; };
+		B8ABBD5E22A435EF004CB1A7 /* HttpHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HttpHandler+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +157,7 @@
 		B8393A7C22A17607001ED067 /* ZIMGLoaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				B8ABBD4E22A431F0004CB1A7 /* TestCases */,
 				B8393A9222A17C9F001ED067 /* TestHost */,
 				B8393A8A22A1763E001ED067 /* Supporting Files */,
 				B8393A7D22A17607001ED067 /* ZIMGLoaderTests.swift */,
@@ -156,6 +176,9 @@
 		B8393A8A22A1763E001ED067 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8ABBD5822A4335D004CB1A7 /* Mocks */,
+				B8ABBD5722A43357004CB1A7 /* Fakes */,
+				B8ABBD5222A4326A004CB1A7 /* Stubs */,
 				B8393A7F22A17607001ED067 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -204,6 +227,7 @@
 		B8ABBD3322A412E9004CB1A7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B8ABBD5D22A435DD004CB1A7 /* Extensions */,
 				B8ABBD3C22A414E4004CB1A7 /* Factories */,
 				B8ABBD3922A413C0004CB1A7 /* Entities */,
 				B8ABBD3422A41311004CB1A7 /* Protocols */,
@@ -235,6 +259,55 @@
 				B8ABBD4022A42732004CB1A7 /* ErrorFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		B8ABBD4E22A431F0004CB1A7 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD5122A4322F004CB1A7 /* Utilities */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
+		B8ABBD5122A4322F004CB1A7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD4F22A43216004CB1A7 /* HttpHandlerTests.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B8ABBD5222A4326A004CB1A7 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD5322A43281004CB1A7 /* StubURLSession.swift */,
+				B8ABBD5522A43293004CB1A7 /* StubSessionDataTask.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		B8ABBD5722A43357004CB1A7 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD5922A43373004CB1A7 /* FakeJsonData.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		B8ABBD5822A4335D004CB1A7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD5B22A433A2004CB1A7 /* MockHttpResponse.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B8ABBD5D22A435DD004CB1A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD5E22A435EF004CB1A7 /* HttpHandler+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +487,7 @@
 				B8393AC222A1AA44001ED067 /* ZIMGLoader.swift in Sources */,
 				B8ABBD4522A427F6004CB1A7 /* HttpHandler.swift in Sources */,
 				B8ABBD3622A41327004CB1A7 /* URLSessionStandard.swift in Sources */,
+				B8ABBD5F22A435EF004CB1A7 /* HttpHandler+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +495,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8ABBD6022A435FE004CB1A7 /* HttpHandler+Extension.swift in Sources */,
+				B8ABBD4C22A431DC004CB1A7 /* CommonError.swift in Sources */,
+				B8ABBD4B22A431D9004CB1A7 /* HttpRequestSpec.swift in Sources */,
+				B8ABBD4922A431C9004CB1A7 /* HttpHandler.swift in Sources */,
 				B8393A7E22A17607001ED067 /* ZIMGLoaderTests.swift in Sources */,
+				B8ABBD5A22A43373004CB1A7 /* FakeJsonData.swift in Sources */,
+				B8ABBD5C22A433A2004CB1A7 /* MockHttpResponse.swift in Sources */,
+				B8ABBD5422A43281004CB1A7 /* StubURLSession.swift in Sources */,
+				B8ABBD5022A43216004CB1A7 /* HttpHandlerTests.swift in Sources */,
+				B8ABBD4A22A431D4004CB1A7 /* URLSessionStandard.swift in Sources */,
+				B8ABBD5622A43293004CB1A7 /* StubSessionDataTask.swift in Sources */,
+				B8ABBD4D22A431E1004CB1A7 /* ErrorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8ABBD6122A435FF004CB1A7 /* HttpHandler+Extension.swift in Sources */,
 				B8ABBD4322A427A5004CB1A7 /* CommonError.swift in Sources */,
 				B8393AAF22A17EA9001ED067 /* MainViewController.swift in Sources */,
 				B8ABBD3222A410ED004CB1A7 /* ZIMGLoader.swift in Sources */,
