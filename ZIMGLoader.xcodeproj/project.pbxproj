@@ -17,6 +17,17 @@
 		B8393AB422A17EAA001ED067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8393AB322A17EAA001ED067 /* Assets.xcassets */; };
 		B8393AB722A17EAA001ED067 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8393AB522A17EAA001ED067 /* LaunchScreen.storyboard */; };
 		B8393AC222A1AA44001ED067 /* ZIMGLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8393AC122A1AA44001ED067 /* ZIMGLoader.swift */; };
+		B8ABBD3222A410ED004CB1A7 /* ZIMGLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8393AC122A1AA44001ED067 /* ZIMGLoader.swift */; };
+		B8ABBD3622A41327004CB1A7 /* URLSessionStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3522A41327004CB1A7 /* URLSessionStandard.swift */; };
+		B8ABBD3B22A413D5004CB1A7 /* HttpRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3A22A413D5004CB1A7 /* HttpRequestSpec.swift */; };
+		B8ABBD3E22A414F7004CB1A7 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3D22A414F7004CB1A7 /* CommonError.swift */; };
+		B8ABBD4122A42732004CB1A7 /* ErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD4022A42732004CB1A7 /* ErrorFactory.swift */; };
+		B8ABBD4222A4278F004CB1A7 /* ErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD4022A42732004CB1A7 /* ErrorFactory.swift */; };
+		B8ABBD4322A427A5004CB1A7 /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3D22A414F7004CB1A7 /* CommonError.swift */; };
+		B8ABBD4522A427F6004CB1A7 /* HttpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD4422A427F6004CB1A7 /* HttpHandler.swift */; };
+		B8ABBD4622A427F6004CB1A7 /* HttpHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD4422A427F6004CB1A7 /* HttpHandler.swift */; };
+		B8ABBD4722A4281B004CB1A7 /* HttpRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3A22A413D5004CB1A7 /* HttpRequestSpec.swift */; };
+		B8ABBD4822A42891004CB1A7 /* URLSessionStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABBD3522A41327004CB1A7 /* URLSessionStandard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +65,11 @@
 		B8393AB622A17EAA001ED067 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8393AB822A17EAA001ED067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8393AC122A1AA44001ED067 /* ZIMGLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIMGLoader.swift; sourceTree = "<group>"; };
+		B8ABBD3522A41327004CB1A7 /* URLSessionStandard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStandard.swift; sourceTree = "<group>"; };
+		B8ABBD3A22A413D5004CB1A7 /* HttpRequestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestSpec.swift; sourceTree = "<group>"; };
+		B8ABBD3D22A414F7004CB1A7 /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		B8ABBD4022A42732004CB1A7 /* ErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorFactory.swift; sourceTree = "<group>"; };
+		B8ABBD4422A427F6004CB1A7 /* HttpHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +164,7 @@
 		B8393A8B22A17796001ED067 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B8ABBD3322A412E9004CB1A7 /* Utilities */,
 				B8393A7222A17607001ED067 /* ZIMGLoader.h */,
 				B8393AC122A1AA44001ED067 /* ZIMGLoader.swift */,
 			);
@@ -182,6 +199,42 @@
 				B8393AB822A17EAA001ED067 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8ABBD3322A412E9004CB1A7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD3C22A414E4004CB1A7 /* Factories */,
+				B8ABBD3922A413C0004CB1A7 /* Entities */,
+				B8ABBD3422A41311004CB1A7 /* Protocols */,
+				B8ABBD4422A427F6004CB1A7 /* HttpHandler.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B8ABBD3422A41311004CB1A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD3522A41327004CB1A7 /* URLSessionStandard.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B8ABBD3922A413C0004CB1A7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD3D22A414F7004CB1A7 /* CommonError.swift */,
+				B8ABBD3A22A413D5004CB1A7 /* HttpRequestSpec.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B8ABBD3C22A414E4004CB1A7 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B8ABBD4022A42732004CB1A7 /* ErrorFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,7 +408,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8ABBD3E22A414F7004CB1A7 /* CommonError.swift in Sources */,
+				B8ABBD3B22A413D5004CB1A7 /* HttpRequestSpec.swift in Sources */,
+				B8ABBD4122A42732004CB1A7 /* ErrorFactory.swift in Sources */,
 				B8393AC222A1AA44001ED067 /* ZIMGLoader.swift in Sources */,
+				B8ABBD4522A427F6004CB1A7 /* HttpHandler.swift in Sources */,
+				B8ABBD3622A41327004CB1A7 /* URLSessionStandard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,8 +437,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8ABBD4322A427A5004CB1A7 /* CommonError.swift in Sources */,
 				B8393AAF22A17EA9001ED067 /* MainViewController.swift in Sources */,
+				B8ABBD3222A410ED004CB1A7 /* ZIMGLoader.swift in Sources */,
+				B8ABBD4822A42891004CB1A7 /* URLSessionStandard.swift in Sources */,
+				B8ABBD4722A4281B004CB1A7 /* HttpRequestSpec.swift in Sources */,
 				B8393AAD22A17EA9001ED067 /* AppDelegate.swift in Sources */,
+				B8ABBD4622A427F6004CB1A7 /* HttpHandler.swift in Sources */,
+				B8ABBD4222A4278F004CB1A7 /* ErrorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
