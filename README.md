@@ -45,3 +45,26 @@ let option = ImageRequestOption(
 
 imageView.loadImage(with: option)
 ```
+
+#### Finished callback
+```swift
+...
+
+imageView.loadImage(with: option) {
+	print("Finish load image")
+}
+```
+
+## Options
+```swift
+let option = ImageRequestOption(
+	urlString: "", // Image url (Mandatory)
+	placeholderImage: UIImage?, // Placeholder image (Optional)
+	loadingIndicator: UIView?, // Indicator view when loading an image (Optional)
+	contentMode: UIView.ContentMode, // Content mode (default value is : `.scaleToFill`)
+	cached: Bool // Flag whether the image should store in cache (default value is : `true`)
+)
+```
+
+## Cache support
+This library is used `NSCache`, which is only support in-memory cache strategy. And by default every successful download operation the image will be stored in cache. If you don't want to store in cache, set `cached` flag in `ImageRequestOption` into `false`.
