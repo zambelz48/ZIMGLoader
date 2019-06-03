@@ -13,7 +13,7 @@ A very simple iOS image loader library written in `Swift` with in-memory cache s
 #### [Carthage](https://github.com/Carthage/Carthage)
 Create a file named `Cartfile` inside your root project, and add this to the `Cartfile` :
 ```
-github "zambelz48/ZIMGLoader" "v1.0.0"
+github "zambelz48/ZIMGLoader" "v1.0.1"
 ```
 Open terminal and execute this :
 ```bash
