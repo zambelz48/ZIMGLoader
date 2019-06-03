@@ -5,6 +5,9 @@
 ![Languages](https://img.shields.io/badge/languages-Swift-blue.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
+## About
+A very simple iOS image loader library written in `Swift` with in-memory cache support using `NSCache`.
+
 ## Installation
 
 #### [Carthage](https://github.com/Carthage/Carthage)
