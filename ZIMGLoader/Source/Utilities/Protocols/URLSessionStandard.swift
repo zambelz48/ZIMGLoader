@@ -16,7 +16,7 @@ protocol URLSessionStandard {
 
 extension URLSession : URLSessionStandard {
 	
-	static func defaultConfig() -> URLSession {
+	public static func defaultConfig() -> URLSession {
 		let config = URLSessionConfiguration.default
 		return URLSession(configuration: config)
 	}

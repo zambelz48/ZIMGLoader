@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension HttpHandler {
 	
@@ -17,6 +18,10 @@ extension HttpHandler {
 			requestSpec.appendHeader(key: "application/json", value: "Content-Type")
 			
 			return request(spec: requestSpec, onSuccess: onSuccess, onFailed: onFailed)
+	}
+	
+	func download(with spec: HttpRequestSpec, onSuccess: @escaping (Data?) -> (), onFailed: @escaping (Error) -> () = { _ in }) {
+		request(spec: spec, onSuccess: onSuccess, onFailed: onFailed)
 	}
 	
 }

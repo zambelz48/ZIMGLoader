@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ErrorType {
+internal enum ErrorType {
 	
 	case httpInvalidSpec
 	case httpError(code: Int)
@@ -28,7 +28,7 @@ enum ErrorType {
 	}
 }
 
-enum ErrorFactory : Error {
+internal enum ErrorFactory : Error {
 	
 	case unknown
 	case by(type: ErrorType)

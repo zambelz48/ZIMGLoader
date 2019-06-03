@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class HttpHandler {
+internal class HttpHandler {
 	
 	private let session: URLSessionStandard
 	
@@ -16,62 +16,73 @@ final class HttpHandler {
 		self.session = session
 	}
 	
-	static func sharedInstance(session: URLSessionStandard) -> HttpHandler {
+	static internal func sharedInstance(session: URLSessionStandard) -> HttpHandler {
 		return HttpHandler(session: session)
 	}
 	
-	func request<T>(spec: HttpRequestSpec, onSuccess: @escaping (T?) -> (), onFailed: @escaping (Error) -> () = { _ in })
-		where T: Codable {
+	internal func request(spec: HttpRequestSpec, onSuccess: @escaping (Data?) -> (), onFailed: @escaping (Error) -> () = { _ in }) {
+		
+		guard let request = configureRequest(with: spec) else {
+			let error = ErrorFactory.by(type: .httpInvalidSpec).detail
+			onFailed(error)
+			return
+		}
+		
+		let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
 			
-			guard let request = configureRequest(with: spec) else {
-				let error = ErrorFactory.by(type: .httpInvalidSpec).detail
+			if let validError = error {
+				onFailed(validError)
+				return
+			}
+			
+			guard let validData = data, let validResponse = response as? HTTPURLResponse else {
+				let error = ErrorFactory.unknown.detail
 				onFailed(error)
 				return
 			}
 			
-			let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+			let statusCode = validResponse.statusCode
+			
+			guard statusCode >= 200 && statusCode < 300 && !validData.isEmpty else {
 				
-				if let validError = error {
-					onFailed(validError)
-					return
-				}
+				let errorType = ErrorType.httpError(code: statusCode)
+				let error = ErrorFactory.by(type: errorType).detail
 				
-				guard let validData = data, let validResponse = response as? HTTPURLResponse else {
-					let error = ErrorFactory.unknown.detail
-					onFailed(error)
-					return
-				}
+				onFailed(error)
 				
-				let decoder = JSONDecoder()
-				let statusCode = validResponse.statusCode
-				
-				guard statusCode >= 200 && statusCode < 300 else {
-					
-					let errorType = ErrorType.httpError(code: statusCode)
-					let error = ErrorFactory.by(type: errorType).detail
-					
-					onFailed(error)
-					
-					return
-				}
-				
-				do {
-					
-					if (validData.isEmpty) {
-						onSuccess(nil)
-						return
-					}
-					
-					let successData = try decoder.decode(T.self, from: validData)
-					
-					onSuccess(successData)
-					
-				} catch let parsingError {
-					onFailed(parsingError)
-				}
+				return
 			}
 			
-			task.resume()
+			onSuccess(validData)
+		}
+		
+		task.resume()
+	}
+	
+	internal func request<T>(spec: HttpRequestSpec, onSuccess: @escaping (T?) -> (), onFailed: @escaping (Error) -> () = { _ in })
+		where T: Codable {
+			
+			request(spec: spec,
+					onSuccess: { (data: Data?) in
+				
+						guard let validData = data, !validData.isEmpty else {
+							return
+						}
+						
+						let decoder = JSONDecoder()
+						
+						do {
+							
+							let successData = try decoder.decode(T.self, from: validData)
+							
+							onSuccess(successData)
+							
+						} catch let parsingError {
+							onFailed(parsingError)
+						}
+						
+					},
+					onFailed: onFailed)
 	}
 	
 	private func configureRequest(with spec: HttpRequestSpec) -> URLRequest? {
