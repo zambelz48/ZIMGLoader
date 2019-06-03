@@ -14,4 +14,30 @@ github "zambelz48/ZIMGLoader" "v1.0.0"
 ```
 
 ## Usages
-TBD
+
+#### Simple
+```
+let option = ImageRequestOption(
+	urlString: "http://www.image-url.com",
+	placeholderImage: nil,
+	loadingIndicator: nil
+)
+
+imageView.loadImage(with: option)
+```
+
+#### Add placeholder image and indicator view
+```
+let placeholderImage = UIImage(named: "your_placeholder_image")
+
+let indicatorView = UIActivityIndicatorView(style: .whiteLarge)
+indicatorView.startAnimating()
+
+let option = ImageRequestOption(
+	urlString: "http://www.image-url.com",
+	placeholderImage: placeholderImage,
+	loadingIndicator: indicatorView
+)
+
+imageView.loadImage(with: option)
+```
