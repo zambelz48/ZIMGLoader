@@ -71,3 +71,14 @@ let option = ImageRequestOption(
 
 ## Cache support
 This library is used `NSCache`, which is only support in-memory cache strategy. And by default every successful download operation the image will be stored in cache. If you don't want to store in cache, set `cached` flag in `ImageRequestOption` into `false`.
+
+#### Set maximum capacity of the cache
+```swift
+let desiredMaxCapacity = 200 // in MB
+ImageCacheHandler.shared.setCache(maxCapacity: desiredMaxCapacity)
+```
+
+#### Clearing caches
+```
+ImageCacheHandler.shared.clearCachedImages()
+```
