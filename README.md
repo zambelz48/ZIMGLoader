@@ -6,10 +6,12 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Installation
-TBD
 
-#### Carthage
-TBD
+#### [Carthage](https://github.com/Carthage/Carthage)
+Create a file named `Cartfile` inside your root project, and add this to the `Cartfile` :
+```
+github "zambelz48/ZIMGLoader" "v1.0.0"
+```
 
 ## Usages
 TBD
