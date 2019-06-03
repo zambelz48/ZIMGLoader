@@ -52,6 +52,7 @@
 		B8D6F61C22A526ED00FF6FF6 /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F61922A526ED00FF6FF6 /* UIImageView+ImageLoader.swift */; };
 		B8D6F61F22A557A800FF6FF6 /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */; };
 		B8D6F62122A559C800FF6FF6 /* ImageCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F62022A559C800FF6FF6 /* ImageCacheHandlerTests.swift */; };
+		B8D6F62422A55E6D00FF6FF6 /* UIImageViewImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F62322A55E6D00FF6FF6 /* UIImageViewImageLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		B8D6F61922A526ED00FF6FF6 /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
 		B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		B8D6F62022A559C800FF6FF6 /* ImageCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHandlerTests.swift; sourceTree = "<group>"; };
+		B8D6F62322A55E6D00FF6FF6 /* UIImageViewImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewImageLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 		B8ABBD4E22A431F0004CB1A7 /* TestCases */ = {
 			isa = PBXGroup;
 			children = (
+				B8D6F62222A55E4400FF6FF6 /* Extensions */,
 				B8ABBD5122A4322F004CB1A7 /* Utilities */,
 				B8D6F62022A559C800FF6FF6 /* ImageCacheHandlerTests.swift */,
 				B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */,
@@ -343,6 +346,14 @@
 				B8ABBD6622A446BD004CB1A7 /* ImageRequestOption.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		B8D6F62222A55E4400FF6FF6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8D6F62322A55E6D00FF6FF6 /* UIImageViewImageLoaderTests.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +547,7 @@
 				B8D6F61622A51EC700FF6FF6 /* ImageLoader.swift in Sources */,
 				B8ABBD6022A435FE004CB1A7 /* HttpHandler+Extension.swift in Sources */,
 				B8ABBD4C22A431DC004CB1A7 /* CommonError.swift in Sources */,
+				B8D6F62422A55E6D00FF6FF6 /* UIImageViewImageLoaderTests.swift in Sources */,
 				B8ABBD4B22A431D9004CB1A7 /* HttpRequestSpec.swift in Sources */,
 				B8ABBD4922A431C9004CB1A7 /* HttpHandler.swift in Sources */,
 				B8D6F62122A559C800FF6FF6 /* ImageCacheHandlerTests.swift in Sources */,
