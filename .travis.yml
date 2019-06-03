@@ -7,4 +7,5 @@ script: ./Scripts/build.sh
 
 branches:
   only:
+  - master
   - /^v\d+\.\d+.\d+?$
