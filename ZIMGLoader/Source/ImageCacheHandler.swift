@@ -27,6 +27,10 @@ open class ImageCacheHandler {
 		cache.removeAllObjects()
 	}
 	
+	internal func getCacheCapacity() -> Int {
+		return cache.totalCostLimit
+	}
+	
 	internal func storeToCache(with key: String, image: UIImage) {
 		
 		let cachedKey = NSString(string: key)

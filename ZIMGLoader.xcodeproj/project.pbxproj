@@ -51,6 +51,7 @@
 		B8D6F61B22A526ED00FF6FF6 /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F61922A526ED00FF6FF6 /* UIImageView+ImageLoader.swift */; };
 		B8D6F61C22A526ED00FF6FF6 /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F61922A526ED00FF6FF6 /* UIImageView+ImageLoader.swift */; };
 		B8D6F61F22A557A800FF6FF6 /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */; };
+		B8D6F62122A559C800FF6FF6 /* ImageCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F62022A559C800FF6FF6 /* ImageCacheHandlerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		B8D6F61422A51EC700FF6FF6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B8D6F61922A526ED00FF6FF6 /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
 		B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
+		B8D6F62022A559C800FF6FF6 /* ImageCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHandlerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				B8ABBD5122A4322F004CB1A7 /* Utilities */,
+				B8D6F62022A559C800FF6FF6 /* ImageCacheHandlerTests.swift */,
+				B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -288,7 +292,6 @@
 			isa = PBXGroup;
 			children = (
 				B8ABBD4F22A43216004CB1A7 /* HttpHandlerTests.swift */,
-				B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				B8ABBD4C22A431DC004CB1A7 /* CommonError.swift in Sources */,
 				B8ABBD4B22A431D9004CB1A7 /* HttpRequestSpec.swift in Sources */,
 				B8ABBD4922A431C9004CB1A7 /* HttpHandler.swift in Sources */,
+				B8D6F62122A559C800FF6FF6 /* ImageCacheHandlerTests.swift in Sources */,
 				B8ABBD5A22A43373004CB1A7 /* FakeJsonData.swift in Sources */,
 				B8ABBD5C22A433A2004CB1A7 /* MockHttpResponse.swift in Sources */,
 				B8ABBD6A22A456A9004CB1A7 /* ImageCacheHandler.swift in Sources */,
