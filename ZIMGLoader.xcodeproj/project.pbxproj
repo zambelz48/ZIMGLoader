@@ -53,6 +53,8 @@
 		B8D6F61F22A557A800FF6FF6 /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */; };
 		B8D6F62122A559C800FF6FF6 /* ImageCacheHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F62022A559C800FF6FF6 /* ImageCacheHandlerTests.swift */; };
 		B8D6F62422A55E6D00FF6FF6 /* UIImageViewImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F62322A55E6D00FF6FF6 /* UIImageViewImageLoaderTests.swift */; };
+		B8D6F62B22A579F600FF6FF6 /* SimpleExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F62922A579ED00FF6FF6 /* SimpleExampleViewController.swift */; };
+		B8D6F62E22A5832900FF6FF6 /* AdvancedExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6F62C22A582AE00FF6FF6 /* AdvancedExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		B8D6F61E22A557A800FF6FF6 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		B8D6F62022A559C800FF6FF6 /* ImageCacheHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHandlerTests.swift; sourceTree = "<group>"; };
 		B8D6F62322A55E6D00FF6FF6 /* UIImageViewImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewImageLoaderTests.swift; sourceTree = "<group>"; };
+		B8D6F62922A579ED00FF6FF6 /* SimpleExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleExampleViewController.swift; sourceTree = "<group>"; };
+		B8D6F62C22A582AE00FF6FF6 /* AdvancedExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,8 @@
 				B8393ABC22A17EDB001ED067 /* Supporting Files */,
 				B8393AAC22A17EA9001ED067 /* AppDelegate.swift */,
 				B8393AAE22A17EA9001ED067 /* MainViewController.swift */,
+				B8D6F62922A579ED00FF6FF6 /* SimpleExampleViewController.swift */,
+				B8D6F62C22A582AE00FF6FF6 /* AdvancedExampleViewController.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -585,6 +591,8 @@
 				B8D6F61C22A526ED00FF6FF6 /* UIImageView+ImageLoader.swift in Sources */,
 				B8D6F61722A51EC700FF6FF6 /* ImageLoader.swift in Sources */,
 				B8ABBD4722A4281B004CB1A7 /* HttpRequestSpec.swift in Sources */,
+				B8D6F62B22A579F600FF6FF6 /* SimpleExampleViewController.swift in Sources */,
+				B8D6F62E22A5832900FF6FF6 /* AdvancedExampleViewController.swift in Sources */,
 				B8393AAD22A17EA9001ED067 /* AppDelegate.swift in Sources */,
 				B8ABBD4622A427F6004CB1A7 /* HttpHandler.swift in Sources */,
 				B8ABBD6D22A4592D004CB1A7 /* ImageRequestOption.swift in Sources */,
