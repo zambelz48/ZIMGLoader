@@ -10,47 +10,81 @@ import UIKit
 
 final class MainViewController: UIViewController {
 	
-	private let imageView: UIImageView = UIImageView()
+	private let tableViewCellIdentifier = "mainExampleCell"
+	
+	private let tableView: UITableView = UITableView()
+	
+	private let pages: [[String : Any]] = [
+		[
+			"name": "Simple example",
+			"viewController": SimpleExampleViewController()
+		],
+		[
+			"name": "Advanced example",
+			"viewController": AdvancedExampleViewController()
+		]
+	]
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.title = "Browse Examples"
 		self.view.backgroundColor = .white
 		
-		configureImageView()
+		configureTableView()
 	}
 	
 	private func layoutGuide() -> UILayoutGuide {
 		return self.view.safeAreaLayoutGuide
 	}
 	
-	private func configureImageView() {
+	private func configureTableView() {
 		
-		imageView.backgroundColor = .gray
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
 		
-		self.view.addSubview(imageView)
+		view.addSubview(tableView)
 		
-		imageView.translatesAutoresizingMaskIntoConstraints = false
+		tableView.translatesAutoresizingMaskIntoConstraints = false
 		
 		NSLayoutConstraint.activate([
-			imageView.centerXAnchor.constraint(greaterThanOrEqualTo: layoutGuide().centerXAnchor),
-			imageView.centerYAnchor.constraint(greaterThanOrEqualTo: layoutGuide().centerYAnchor),
-			imageView.widthAnchor.constraint(equalToConstant: 200.0),
-			imageView.heightAnchor.constraint(equalToConstant: 200.0)
+			tableView.topAnchor.constraint(equalTo: layoutGuide().topAnchor),
+			tableView.bottomAnchor.constraint(equalTo: layoutGuide().bottomAnchor),
+			tableView.leadingAnchor.constraint(equalTo: layoutGuide().leadingAnchor),
+			tableView.trailingAnchor.constraint(equalTo: layoutGuide().trailingAnchor)
 		])
 		
-		loadImage()
+		tableView.dataSource = self
+		tableView.delegate = self
+	}
+}
+
+extension MainViewController : UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return pages.count
 	}
 	
-	private func loadImage() {
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		let option = ImageRequestOption(
-			urlString: "https://images.unsplash.com/photo-1464550883968-cec281c19761?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=1881cd689e10e5dca28839e68678f432",
-			placeholderImage: nil,
-			loadingIndicator: nil
-		)
+		let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath)
+		cell.accessoryType = .disclosureIndicator
 		
-		imageView.loadImage(with: option)
+		cell.textLabel?.text = pages[indexPath.row]["name"] as? String
+		
+		return cell
 	}
+	
+}
 
+extension MainViewController : UITableViewDelegate {
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		guard let viewController = pages[indexPath.row]["viewController"] as? UIViewController else {
+			return
+		}
+		
+		navigationController?.pushViewController(viewController, animated: true)
+	}
+	
 }
