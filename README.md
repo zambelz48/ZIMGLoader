@@ -12,11 +12,15 @@ Create a file named `Cartfile` inside your root project, and add this to the `Ca
 ```
 github "zambelz48/ZIMGLoader" "v1.0.0"
 ```
+Open terminal and execute this :
+```bash
+carthage update --platform iOS
+```
 
 ## Usages
 
 #### Simple
-```
+```swift
 let option = ImageRequestOption(
 	urlString: "http://www.image-url.com",
 	placeholderImage: nil,
@@ -27,7 +31,7 @@ imageView.loadImage(with: option)
 ```
 
 #### Add placeholder image and indicator view
-```
+```swift
 let placeholderImage = UIImage(named: "your_placeholder_image")
 
 let indicatorView = UIActivityIndicatorView(style: .whiteLarge)
